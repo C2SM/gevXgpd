@@ -1,0 +1,99 @@
+version 1.4.2 2014-06-24
+
+       Update
+       New function qqgev() for producing Q-Q plots for the GEV distribution.
+       (Christoph Frei)
+
+version 1.4.1 2014-04-15
+
+       Update
+       Output from fitGEV() and fitGPD() now includes the p-value of
+       the Kolmogorov-Smirnov Test. Note that this is actually a misuse
+       of the test, which assumes that the data have not been used for
+       parameter estimation. The test results may nevertheless be useful
+       for identifying data quality problems in automated application of
+       GEV/GPD.
+       (Christoph Frei)
+
+version 1.4.0 2014-02-04
+
+       Update
+       Merged changes from version 1.3.8-1 till 1.3.8-3 (from Sophie)
+       with changes made independently (by Chrigel).
+       (Christoph Frei)
+
+version 1.3.8-3 2013-12-10
+       plot.conf.pot.R
+       plot.conf.xval.R  replaced as.real by as.double as this function
+	                 does not exist in R 3.0 any more
+       (Sophie Fukutome)
+
+version 1.3.8-2 2012-07-04
+       fitGPD.mlik:	 tim=len/(lamda*theta) for consistency
+       (Sophie Fukutome)
+       
+version 1.3.8-1 2011-06-06
+       plot.thresh.diag: use unique to avoid plotting problems due to 
+			 ties in threshold. 
+       fitGPD.mlik: 	 correct expression of foft so that it takes 
+			 clustering into account by taking lamda*t*theta 
+			 as a return period, rather than lamda*t.
+			 theta is the extremal index, i.e. the 
+			 reciprocal mean cluster size. 
+			 This is important for the estimation of 
+			 return levels (s. Coles, p.103), because one 
+			 should be counting clusters, rather than exceedances.
+			 (fus, 6.6.2011) 
+       same for fitGPD.lmom, fitEXPON.mlik, fitEXPON.lmom
+       (Sophie Fukutome)
+
+version 1.3.7 2013-06-10
+
+       Minor Update
+       Changed numeric increment for the calculation of likelihood
+       profile confidence intervals for return values. 
+       Functions changed: conf.bounds.pot.lprof(), conf.bounds.xval.lprof()
+       Argument frac.incr to the calls of lik.prof() was changed from 
+       1/10 to 1/50 when confidence intervals were calculated for return
+       values and shapes larger than 0.25 (k < -0.25). 
+       This avoids failures of the likelihood profile calculation
+       occurring in cases with large (positive) shape (negative k) at large
+       return periods. The case of hourly precipitation in Zurich dealt with
+       in the lecture was the motivation to improve this. 
+       In cases when this reduction of the increment is effective the
+       likelihood profile calculations last considerably longer.
+       (Christoph Frei)
+
+version 1.3.6 2013-06-10
+
+       Rebuild for R-3.0.0, added NAMESPACE file 
+       (Christoph Frei)
+
+version 1.3.5 2010-06-25
+
+       Rebuild for R-2.11.1 
+       (Christoph Frei)
+
+version 1.3.4 2009-07-30
+
+       Amended several documentations. 
+       (Christoph Frei)
+
+version 1.3.3 2007-07-10
+
+       Introduced ChangeLog File. 
+       (Christoph Frei)
+
+version 1.3 2007-06-01
+
+       Bugfix reported by Paul Della-Marta. 
+       (Christoph Frei)
+
+       Added datasets for SAidH Lecture Uni Bern. 
+       (Christoph Frei)
+
+version 1.1.2 2007-01-02
+
+       First operational version for ACWD lecture ETH 
+       (Christoph Frei)
+

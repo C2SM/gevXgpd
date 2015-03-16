@@ -1,0 +1,15 @@
+Package: gevXgpd
+Type: Package
+Title: Extreme Value Analysis
+Version: 1.4.2
+Date: 2014-06-24
+Author: Christoph Frei and Sophie Fukutome
+Maintainer: Christoph Frei <christoph.frei@meteoswiss.ch>
+Depends: R (>= 2.10)
+Description: Functions to perform block maximum and peak over threshold
+      extreme value analysis. Fitting generalized extreme value (GEV) and 
+      generalized pareto distributions GPD, calculating 
+      confidence intervals (for parameters and return levels) and 
+      plotting return level diagrams. 
+License: GPL-2
+Packaged: 2014-07-14 13:07:12 UTC; chrigel
